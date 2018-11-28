@@ -1,6 +1,6 @@
 # Proyecto de cursos
 
-Proyecto para gestión de cursos, hecha a través del framework de PHP en Yii2.
+Proyecto para gestión de cursos, hecho a través del framework de PHP en Yii2.
 
 ## Instalación
 
