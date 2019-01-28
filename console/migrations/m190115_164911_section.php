@@ -12,7 +12,7 @@ class m190115_164911_section extends Migration
      */
     public function safeUp()
     {
-            return $this->execute(file_get_contents(Yii::getAlias('console/migrations/sql/m190115_164911.sql')));
+        return $this->execute(file_get_contents(Yii::getAlias('console/migrations/sql/m190115_164911.sql')));
     }
 
     /**
