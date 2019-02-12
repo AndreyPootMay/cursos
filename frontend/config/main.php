@@ -11,15 +11,23 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'user' => [
+            'class' => Da\User\Module::class,
+            // ...other configs from here: [Configuration Options](installation/configuration-options.md), e.g.
+            // 'generatePasswords' => true,
+            // 'switchIdentitySessionKey' => 'myown_usuario_admin_user_key',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
-        'user' => [
+        /*'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
-        ],
+        ],*/
         'session' => [
             // this is the name of the session cookie used for login on the frontend
             'name' => 'practical-a-frontend',
