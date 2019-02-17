@@ -4,7 +4,7 @@
 
 $this->title = 'E Center - Aprendizaje en línea';
 ?>
-<div class="site-index masthead" style="background-color: black;">
+<div class="site-index masthead">
 
 <!-- Full Page Image Header with Vertically Centered Content -->
   <div class="container h-100">
