@@ -11,8 +11,9 @@ return [
     'basePath' => dirname(__DIR__),
         'bootstrap' => [
         'log'],
-         'aliases' => [
+    'aliases' => [
         '@img' =>'/frontend/views/img',
+        '@adminlte/widgets'=>'@vendor/adminlte/yii2-widgets'
     ],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
