@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+
 /* @var $this yii\web\View */
 
 $this->title = 'E Center - Aprendizaje en línea';
@@ -13,7 +15,9 @@ $this->title = 'E Center - Aprendizaje en línea';
         <img class="logo" src="<?= Yii::getAlias('@img')?>/logo.png" width="600px">
         <h1 class="font-weight-light" style="color:black">Aprendizaje 100% digital.</h1>
         <p class="lead" style="color:black">Educación colaborativa desde la web.</p>
-        <p><a class="btn btn-primary" href="user/login">Ingresar &raquo;</a></p> 
+        <p>
+          <?= Html::a(Yii::t('app', 'Ingresar &raquo;'), ['user/login'], ['class' => 'btn btn-primary']) ?>
+        </p>
       </div>
     </div>
   </div>

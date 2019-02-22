@@ -3,7 +3,10 @@
 use adminlte\widgets\Menu;
 use yii\helpers\Html;
 use yii\helpers\Url;
+
 ?>
+
+<?php  if (!Yii::$app->user->isGuest) { ?>
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -29,8 +32,10 @@ use yii\helpers\Url;
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <?=
-        Menu::widget(
+    <?php } ?>
+        <?php
+        if (!Yii::$app->user->isGuest) {
+        echo Menu::widget(
                 [
                     'options' => ['class' => 'sidebar-menu'],
                     'items' => [
@@ -67,7 +72,8 @@ use yii\helpers\Url;
                         ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
                     ],
                 ]
-        )
+        );
+    }
         ?>
         
     </section>

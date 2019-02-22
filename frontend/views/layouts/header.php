@@ -3,12 +3,13 @@ use yii\helpers\Html;
 ?>
 <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="site/index" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b><?= '<img src="'. Yii::getAlias('@img') . '\logo.png" width="60px" class="img-responsive" style="padding-top: 10;"/>'?></b></span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b class="text-center"><?= '<img src="'. Yii::getAlias('@img') . '\logo.png" width="60px" class="img-responsive" style="padding-top: 10;"/>' ?></b> </span>
         </a>
+        <?php  if (!Yii::$app->user->isGuest) { ?>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -249,4 +250,5 @@ use yii\helpers\Html;
             </ul>
           </div>
         </nav>
+      <?php } ?>
       </header>
