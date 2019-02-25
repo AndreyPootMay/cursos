@@ -9,7 +9,12 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+        'bootstrap' => [
+        'log'],
+    'aliases' => [
+        '@img' =>'/frontend/views/img',
+        '@adminlte/widgets'=>'@vendor/adminlte/yii2-widgets'
+    ],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'user' => [
