@@ -870,16 +870,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-httpclient.git",
-                "reference": "a77fbb7309badd6d815e72083355f668a3c8eda3"
+                "reference": "f9555930666dce6d96d53b8474e0cc996fbe1a69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/a77fbb7309badd6d815e72083355f668a3c8eda3",
-                "reference": "a77fbb7309badd6d815e72083355f668a3c8eda3",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/f9555930666dce6d96d53b8474e0cc996fbe1a69",
+                "reference": "f9555930666dce6d96d53b8474e0cc996fbe1a69",
                 "shasum": ""
             },
             "require": {
                 "yiisoft/yii2": "~2.0.13"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.27|~5.7.21|^6.2"
             },
             "type": "yii2-extension",
             "extra": {
@@ -909,7 +912,7 @@
                 "httpclient",
                 "yii2"
             ],
-            "time": "2018-10-24T12:14:04+00:00"
+            "time": "2019-02-19T09:35:49+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
