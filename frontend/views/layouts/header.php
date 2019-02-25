@@ -7,7 +7,7 @@ use yii\helpers\Html;
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b><?= '<img src="'. Yii::getAlias('@img') . '\logo.png" width="60px" class="img-responsive" style="padding-top: 10;"/>'?></b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b class="text-center"><?= '<img src="'. Yii::getAlias('@img') . '\logo.png" width="60px" class="img-responsive" style="padding-top: 10;"/>' ?></b> </span>
+          <span class="logo-lg"><b class="text-center"><?= Yii::t('app', 'E-Center') ?></b> </span>
         </a>
         <?php  if (!Yii::$app->user->isGuest) { ?>
         <!-- Header Navbar: style can be found in header.less -->

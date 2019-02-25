@@ -14,7 +14,7 @@ use yii\helpers\Url;
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-<?= Html::img('@web/img/user2-160x160.jpg', ['class' => 'img-circle', 'alt' => 'User Image']) ?>
+                <?= Yii::t('app', 'E-Center')  ?>
             </div>
             <div class="pull-left info">
                 <p>Alexander Pierce</p>
