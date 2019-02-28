@@ -52,15 +52,15 @@ class Profile extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'user_id' => Yii::t('app', 'User ID'),
-            'name' => Yii::t('app', 'Name'),
-            'public_email' => Yii::t('app', 'Public Email'),
-            'gravatar_email' => Yii::t('app', 'Gravatar Email'),
-            'gravatar_id' => Yii::t('app', 'Gravatar ID'),
-            'location' => Yii::t('app', 'Location'),
-            'website' => Yii::t('app', 'Website'),
-            'timezone' => Yii::t('app', 'Timezone'),
-            'bio' => Yii::t('app', 'Bio'),
+            'user_id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Nombre'),
+            'public_email' => Yii::t('app', 'E-Mail Público'),
+            'gravatar_email' => Yii::t('app', 'E-Mail Gravatar'),
+            'gravatar_id' => Yii::t('app', 'ID del Gravatar'),
+            'location' => Yii::t('app', 'Locación'),
+            'website' => Yii::t('app', 'Sitio Web'),
+            'timezone' => Yii::t('app', 'Zona Horaria'),
+            'bio' => Yii::t('app', 'Biografía'),
         ];
     }
 

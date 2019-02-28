@@ -7,6 +7,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\Profile;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -72,7 +73,17 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $profile = Profile::findOne([
+            'user_id' => Yii::$app->user->identity->id,
+        ]);
+
+        /// TO-DO
+        if (is_null($profile["name"])) {
+            return $this->redirect(['profile/update', 'id' => Yii::$app->user->identity->id]);
+        } else {
+            return $this->render('index'); 
+        }
+
     }
 
     /**

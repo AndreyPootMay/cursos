@@ -57,16 +57,16 @@ class Courses extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'course_name' => Yii::t('app', 'Course Name'),
-            'course_details' => Yii::t('app', 'Course Details'),
-            'evaluation' => Yii::t('app', 'Evaluation'),
-            'category' => Yii::t('app', 'Category'),
-            'price' => Yii::t('app', 'Price'),
-            'students' => Yii::t('app', 'Students'),
-            'active' => Yii::t('app', 'Active'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'user_id' => Yii::t('app', 'Id del Usuario'),
+            'course_name' => Yii::t('app', 'Nombre del Curso'),
+            'course_details' => Yii::t('app', 'Detalles del Curso'),
+            'evaluation' => Yii::t('app', 'Evaluación'),
+            'category' => Yii::t('app', 'Categoría'),
+            'price' => Yii::t('app', 'Precio'),
+            'students' => Yii::t('app', 'Estudiantes'),
+            'active' => Yii::t('app', 'Activo'),
+            'created_at' => Yii::t('app', 'Creado el'),
+            'updated_at' => Yii::t('app', 'Actualizado el'),
         ];
     }
 

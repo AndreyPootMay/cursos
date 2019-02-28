@@ -14,5 +14,8 @@ $this->title = 'E Center - Aprendizaje en línea';
     <p>
       <?= Html::a(Yii::t('app', 'Ingresar &raquo;'), ['user/login'], ['class' => 'btn btn-primary']) ?>
     </p>
+   	<p>
+      <?= Html::a(Yii::t('app', 'Registrarse &raquo;'), ['user/register'], ['class' => 'btn btn-success']) ?>
+    </p>
     </div>
 </div>
