@@ -74,7 +74,7 @@ use yii\helpers\Url;
                 ]
         );
     }
-        ?>
+?>
         
     </section>
     <!-- /.sidebar -->
