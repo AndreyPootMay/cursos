@@ -73,15 +73,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $profile = Profile::findOne([
-            'user_id' => Yii::$app->user->identity->id,
-        ]);
-
-        /// TO-DO
-        if (is_null($profile["name"])) {
-            return $this->redirect(['profile/update', 'id' => Yii::$app->user->identity->id]);
+        if(!Yii::$app->user->isGuest){
+            $profile = Profile::findOne([
+                'user_id' => Yii::$app->user->identity->id,
+            ]);      
+            /// TO-DO
+            if (is_null($profile["name"])) {
+                return $this->redirect(['profile/update', 'id' => Yii::$app->user->identity->id]);
+            } else {
+                return $this->render('index'); 
+            }
         } else {
-            return $this->render('index'); 
+                return $this->render('index'); 
         }
 
     }
