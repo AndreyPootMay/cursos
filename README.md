@@ -53,6 +53,7 @@ phpcbf --encoding=utf-8 --extensions=php ruta\archivo\reparar.php
 
 Primero y antes que nada hay que leer y entender [Autenticación](https://www.yiiframework.com/doc/guide/2.0/es/security-authentication) y [Autorización](https://www.yiiframework.com/doc/guide/2.0/es/security-authorization) especialmente [Control de Acceso Basado en Roles (RBAC)](https://www.yiiframework.com/doc/guide/2.0/es/security-authorization#rbac) de la guía de Yii2.
 
+
 #### Construir los datos de Autorización
 
 Construir los datos de autorización implica las siguientes tareas:
