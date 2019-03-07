@@ -73,10 +73,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        if(!Yii::$app->user->isGuest){
-            $profile = Profile::findOne([
+        if(!Yii::$app->user->isGuest) {
+            $profile = Profile::findOne(
+                [
                 'user_id' => Yii::$app->user->identity->id,
-            ]);      
+                ]
+            );      
             /// TO-DO
             if (is_null($profile["name"])) {
                 return $this->redirect(['profile/update', 'id' => Yii::$app->user->identity->id]);
@@ -105,9 +107,11 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            return $this->render('login', [
+            return $this->render(
+                'login', [
                 'model' => $model,
-            ]);
+                ]
+            );
         }
     }
 
@@ -140,9 +144,11 @@ class SiteController extends Controller
 
             return $this->refresh();
         } else {
-            return $this->render('contact', [
+            return $this->render(
+                'contact', [
                 'model' => $model,
-            ]);
+                ]
+            );
         }
     }
 
@@ -172,9 +178,11 @@ class SiteController extends Controller
             }
         }
 
-        return $this->render('signup', [
+        return $this->render(
+            'signup', [
             'model' => $model,
-        ]);
+            ]
+        );
     }
 
     /**
@@ -195,15 +203,17 @@ class SiteController extends Controller
             }
         }
 
-        return $this->render('requestPasswordResetToken', [
+        return $this->render(
+            'requestPasswordResetToken', [
             'model' => $model,
-        ]);
+            ]
+        );
     }
 
     /**
      * Resets password.
      *
-     * @param string $token
+     * @param  string $token
      * @return mixed
      * @throws BadRequestHttpException
      */
@@ -221,8 +231,10 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        return $this->render('resetPassword', [
+        return $this->render(
+            'resetPassword', [
             'model' => $model,
-        ]);
+            ]
+        );
     }
 }
