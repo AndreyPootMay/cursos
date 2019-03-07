@@ -27,9 +27,9 @@ Se utiliza el tema AdminLTE; este se instala de manera local haciendo lo siguien
 
 ### PHP_CodeSnifFer
 
-El paquete depende de [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+El paquete PHP Code Sniffer es un asistente para la buenas practicas de escritura de PHP, se añade para las correcciones dentro del proyecto.
 
-#### Usando code_style
+#### Usando Code Sniffer
 
 Después de hacer `composer update` y que CodeSniffer fué instalado puedes verificar el estilo de código con:
 
