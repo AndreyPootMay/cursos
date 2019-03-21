@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Profile */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Profiles'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Perfiles'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,11 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->user_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->user_id], [
+        <?= Html::a(Yii::t('app', 'Actualizar'), ['update', 'id' => $model->user_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Eliminar'), ['delete', 'id' => $model->user_id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'confirm' => Yii::t('app', '¿Está seguro de querer elimina este elemento?'),
                 'method' => 'post',
             ],
         ]) ?>
