@@ -1,5 +1,7 @@
 <?php
+
 use yii\helpers\Html;
+
 ?>
 <header class="main-header">
         <!-- Logo -->
@@ -209,33 +211,33 @@ use yii\helpers\Html;
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<?= Html::img('@web/img/user2-160x160.jpg', ['class' => 'user-image', 'alt'=>'User Image']) ?>
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <span class="hidden-xs"><?=  Yii::$app->user->identity->username ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <?= Html::img('@web/img/user2-160x160.jpg', ['class' => 'img-circle', 'alt'=>'User Image']) ?>
                     <p>
-                      Alexander Pierce - Web Developer
+                      <?=  Yii::$app->user->identity->username ?> - Web Developer
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
                   <!-- Menu Body -->
                   <li class="user-body">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
+                    <div class="col-xs-12 text-center">
+                      <?= Html::a(Yii::t('app', 'Mis cursos'), ['my-courses/view', 'id' => Yii::$app->user->identity->id], ['class' => 'btn btn-primary']) ?>
                     </div>
-                    <div class="col-xs-4 text-center">
+                    <!--<div class="col-xs-4 text-center">
                       <a href="#">Sales</a>
                     </div>
                     <div class="col-xs-4 text-center">
                       <a href="#">Friends</a>
-                    </div>
+                    </div>-->
                   </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <?= Html::a(Yii::t('app', 'Perfil'), ['profile/view', 'id' => Yii::$app->user->identity->id], ['class' => 'btn btn-primary']) ?>
                     </div>
                     <div class="pull-right">
                       <?= Html::a(Yii::t('app', 'Cerrar sessión &raquo;'), ['user/security/logout'], ['data' => [
