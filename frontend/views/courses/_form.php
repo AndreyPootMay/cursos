@@ -12,25 +12,21 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'user_id')->textInput() ?>
+    <div class="row">
+        <?= $form->field($model, 'course_name')->textInput(['maxlength' => true]) ?>        
+    </div>
 
-    <?= $form->field($model, 'course_name')->textInput(['maxlength' => true]) ?>
+    <div class="row">
+        <?= $form->field($model, 'course_details')->textArea(['maxlength' => true, 'rows' => 6]) ?>
+    </div>
 
-    <?= $form->field($model, 'course_details')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'evaluation')->textInput() ?>
-
-    <?= $form->field($model, 'category')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'students')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'active')->textInput() ?>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <div class="row">
+        <?= $form->field($model, 'category')->textInput(['maxlength' => true]) ?>
+    </div>
+    
+    <div class="row">
+        <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Guardar'), ['class' => 'btn btn-success']) ?>
