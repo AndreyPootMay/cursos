@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', 'Eliminar'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'confirm' => Yii::t('app', '¿Desea eliminar el siguiente curso?'),
                 'method' => 'post',
             ],
         ]) ?>
@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'user_id',
+            //'id',
+            //'user_id',
             'course_name',
             'course_details',
             'evaluation',
