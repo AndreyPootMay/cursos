@@ -12,21 +12,23 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'public_email')->textInput(['maxlength' => true]) ?>
+<div class="row">
+  <div class="col-md-4"><?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?></div>
+  <div class="col-md-4"><?= $form->field($model, 'public_email')->textInput(['maxlength' => true]) ?></div>
+  <div class="col-md-4"></div>
+</div>
 
-    <?= $form->field($model, 'gravatar_email')->textInput(['maxlength' => true]) ?>
+<div class="row">
+  <div class="col-md-6"><?= $form->field($model, 'location')->textInput(['maxlength' => true]) ?></div>
+  <div class="col-md-6"><?= $form->field($model, 'website')->textInput(['maxlength' => true]) ?></div>
+</div>
 
-    <?= $form->field($model, 'gravatar_id')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'location')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'website')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'timezone')->textInput(['maxlength' => true]) ?>
-
+<div class="3">
     <?= $form->field($model, 'bio')->textarea(['rows' => 6]) ?>
+</div>
+
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Guardar'), ['class' => 'btn btn-success']) ?>
