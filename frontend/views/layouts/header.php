@@ -218,8 +218,8 @@ use yii\helpers\Html;
                   <li class="user-header">
                     <?= Html::img('@web/img/user2-160x160.jpg', ['class' => 'img-circle', 'alt'=>'User Image']) ?>
                     <p>
-                      <?=  Yii::$app->user->identity->username ?> - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      <?= Yii::$app->user->identity->username ?> - Web Developer
+                      <small><?= Yii::t('app', 'Miembro desde: ')  ?></small>
                     </p>
                   </li>
                   <!-- Menu Body -->
@@ -237,10 +237,10 @@ use yii\helpers\Html;
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <?= Html::a(Yii::t('app', 'Perfil'), ['profile/view', 'id' => Yii::$app->user->identity->id], ['class' => 'btn btn-primary']) ?>
+                        <?= Html::a(Yii::t('app', 'Perfil'), ['profile/view', 'id' => Yii::$app->user->identity->id], ['class' => 'btn btn-primary']) ?>
                     </div>
                     <div class="pull-right">
-                      <?= Html::a(Yii::t('app', 'Cerrar sessión &raquo;'), ['user/security/logout'], ['data' => [
+                      <?= Html::a(Yii::t('app', 'Cerrar sesión &raquo;'), ['user/security/logout'], ['data' => [
                       'method' => 'post']], ['class' => 'btn btn-danger']) ?>
                     </div>
                   </li>

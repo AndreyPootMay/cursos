@@ -40,33 +40,33 @@ use yii\helpers\Url;
                     'options' => ['class' => 'sidebar-menu'],
                     'items' => [
                         ['label' => 'Menu', 'options' => ['class' => 'header']],
-                        ['label' => 'Dashboard', 'icon' => 'fa fa-dashboard', 
+                        ['label' => 'Panel de Control', 'icon' => 'fa fa-dashboard', 
                             'url' => ['/'], 'active' => $this->context->route == 'site/index'
                         ],
                         [
-                            'label' => 'Master',
+                            'label' => 'Mis cursos',
                             'icon' => 'fa fa-database',
                             'url' => '#',
                             'items' => [
                                 [
-                                    'label' => 'Master1',
+                                    'label' => 'Cursos Activos',
                                     'icon' => 'fa fa-database',
                                     'url' => '?r=master1/',
-				    'active' => $this->context->route == 'master1/index'
+				                    'active' => $this->context->route == 'master1/index'
                                 ],
                                 [
-                                    'label' => 'Master2',
+                                    'label' => 'Cursos Inactivos',
                                     'icon' => 'fa fa-database',
                                     'url' => '?r=master2/',
-				    'active' => $this->context->route == 'master2/index'
+                                    'active' => $this->context->route == 'master2/index'
                                 ]
                             ]
                         ],
                         [
-                            'label' => 'Users',
-                            'icon' => 'fa fa-users',
+                            'label' => 'Acerca de',
+                            'icon' => 'fa fa-info',
                             'url' => ['/user'],
-                            'active' => $this->context->route == 'user/index',
+                            'active' => $this->context->route == 'site/about',
                         ],
                         ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii'],],
                         ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
