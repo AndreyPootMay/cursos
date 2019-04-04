@@ -225,7 +225,7 @@ use yii\helpers\Html;
                   <!-- Menu Body -->
                   <li class="user-body">
                     <div class="col-xs-12 text-center">
-                      <?= Html::a(Yii::t('app', 'Mis cursos'), ['my-courses/view', 'id' => Yii::$app->user->identity->id], ['class' => 'btn btn-primary']) ?>
+                      <?= Html::a(Yii::t('app', 'Mis cursos'), ['my-courses/index', 'id' => Yii::$app->user->identity->id], ['class' => 'btn btn-primary']) ?>
                     </div>
                     <!--<div class="col-xs-4 text-center">
                       <a href="#">Sales</a>

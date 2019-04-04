@@ -35,7 +35,7 @@ $this->title = 'E Center - Aprendizaje en línea';
               <i class="fa fa-shopping-cart"></i>
             </div>
             <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
+              <?= Yii::t('app', 'Más Información')  ?> <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>
         </div>
@@ -52,7 +52,7 @@ $this->title = 'E Center - Aprendizaje en línea';
               <i class="fa fa-certificate"></i>
             </div>
             <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
+              <?= Yii::t('app', 'Más Información')  ?> <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>
         </div>
@@ -69,7 +69,7 @@ $this->title = 'E Center - Aprendizaje en línea';
               <i class="fa fa-trash"></i>
             </div>
             <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
+              <?= Yii::t('app', 'Más Información')  ?> <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>
         </div>
@@ -87,17 +87,17 @@ $this->title = 'E Center - Aprendizaje en línea';
               <i class="fa fa-edit"></i>
             </div>
             <a href="#" class="small-box-footer">
-              More info <i class="fa fa-arrow-circle-right"></i>
+              <?= Yii::t('app', 'Más Información')  ?> <i class="fa fa-arrow-circle-right"></i>
             </a>
           </div>
         </div>
     </div>
-<div class="row">
-        <div class="col-sm-12 col-md-6">
-            <div class="box box-solid">
-                <div class="box-body">
+    <?php foreach ($courses as $course) { ?>
+        <div>
+          <div class="box box-solid">
+              <div class="box-body">
                     <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
-                            <?= Yii::t('app', 'Categoría del curso') ?>
+                    <?= $course->category ?>
                     </h4>
                     <div class="media">
                     <div class="media-left">
@@ -108,22 +108,19 @@ $this->title = 'E Center - Aprendizaje en línea';
                 <div class="media-body">
                     <div class="clearfix">
                         <p class="pull-right">
-                            <a href="#" class="btn btn-success btn-sm ad-click-event">
-                                <?= Yii::t('app', '¡Echa un vistazo!') ?>
-                            </a>
+                            <?= Html::a(Yii::t('app', '¡Echa un vistazo!'), ['courses/view', 'id' => $course->id], ['class' => 'btn btn-success']) ?>
                         </p>
 
-                    <h4 style="margin-top: 0"><?= Yii::t('app', 'Nombre del curso')  ?> ─ $18</h4>
-                    <p><?= Yii::t('app', 'Descripción del curso')  ?></p>
+                    <h4 style="margin-top: 0"><?= $course->course_name . ' ─ $' . round($course->price, 2) ?></h4>
+                    <p><?= $course->course_details  ?></p>
                     <p style="margin-bottom: 0">
-                        <i class="fa fa-shopping-cart margin-r5"></i> 32+ <?= Yii::t('app', 'Compras') ?>
+                        <i class="fa fa-shopping-cart margin-r5"></i> <?= $course->students . '+ ' . Yii::t('app', 'Compras') ?>
                     </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+              </div>
+            </div>  </div>
+      </div>
+  <?php  } ?>
 <?php } ?>
 </div>

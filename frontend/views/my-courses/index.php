@@ -7,17 +7,10 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\MyCoursesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'My Courses');
+$this->title = Yii::t('app', 'Mis cursos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="my-courses-index">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a(Yii::t('app', 'Create My Courses'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,12 +18,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'user_id',
-            'courses_id',
+            [
+                'attribute' => '',
+                'label' => 'Nombre del curso',
+                'value' => 'courses.course_name',
+            ],
             'evaluation',
             'progress',
-            //'certification',
+            'certification',
             //'active',
             //'created_at',
             //'updated_at',

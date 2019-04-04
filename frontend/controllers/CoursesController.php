@@ -66,6 +66,13 @@ class CoursesController extends Controller
     {
         $model = new Courses();
 
+        $model->user_id = Yii::$app->user->identity->id;
+        $model->evaluation = 0;
+        $model->students = 0;
+        $model->active = 1;
+        $model->created_at = 1;
+        $model->updated_at = 1;
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
