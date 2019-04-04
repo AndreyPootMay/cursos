@@ -40,7 +40,7 @@ class Courses extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'course_name', 'course_details', 'category', 'price', 'students', 'active', 'created_at', 'updated_at'], 'required'],
+            [['user_id', 'course_name', 'course_details', 'category', 'price'], 'required'],
             [['user_id', 'evaluation', 'active', 'created_at', 'updated_at'], 'integer'],
             [['price'], 'number'],
             [['course_name', 'course_details'], 'string', 'max' => 255],

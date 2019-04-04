@@ -2,12 +2,14 @@
 namespace frontend\controllers;
 
 use Yii;
+use yii\data\Pagination;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\Profile;
+use common\models\Courses;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -73,6 +75,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $queryCourses = Courses::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $queryCourses->count(),
+        ]);
+
+        $courses = $queryCourses->orderBy('course_name')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
         if(!Yii::$app->user->isGuest) {
             $profile = Profile::findOne(
                 [
@@ -83,12 +97,14 @@ class SiteController extends Controller
             if (is_null($profile["name"])) {
                 return $this->redirect(['profile/update', 'id' => Yii::$app->user->identity->id]);
             } else {
-                return $this->render('index'); 
+                return $this->render('index', [
+                    'courses' => $courses,
+                    'pagination' => $pagination,
+                ]); 
             }
         } else {
-                return $this->render('index'); 
+            return $this->render('index'); 
         }
-
     }
 
     /**

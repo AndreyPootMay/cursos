@@ -48,14 +48,14 @@ class MyCourses extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'user_id' => Yii::t('app', 'User ID'),
-            'courses_id' => Yii::t('app', 'Courses ID'),
-            'evaluation' => Yii::t('app', 'Evaluation'),
-            'progress' => Yii::t('app', 'Progress'),
-            'certification' => Yii::t('app', 'Certification'),
-            'active' => Yii::t('app', 'Active'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'user_id' => Yii::t('app', 'Id del Usuario'),
+            'courses_id' => Yii::t('app', 'Id del Curso'),
+            'evaluation' => Yii::t('app', 'Evaluación'),
+            'progress' => Yii::t('app', 'Progreso'),
+            'certification' => Yii::t('app', 'Certificado'),
+            'active' => Yii::t('app', 'Activo'),
+            'created_at' => Yii::t('app', 'Creado el'),
+            'updated_at' => Yii::t('app', 'Actualizado el'),
         ];
     }
 
@@ -65,5 +65,13 @@ class MyCourses extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCourses()
+    {
+        return $this->hasOne(Courses::className(), ['id' => 'courses_id']);
     }
 }

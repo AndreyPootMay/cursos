@@ -28,6 +28,26 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
     </div>
 
+        <div class="row">
+        <?= $form->field($model, 'evaluation')->textInput(['maxlength' => true]) ?>
+    </div>
+
+        <div class="row">
+        <?= $form->field($model, 'created_at')->textInput(['maxlength' => true]) ?>
+    </div>
+
+        <div class="row">
+        <?= $form->field($model, 'updated_at')->textInput(['maxlength' => true]) ?>
+    </div>
+
+        <div class="row">
+        <?= $form->field($model, 'students')->textInput(['maxlength' => true]) ?>
+    </div>
+
+        <div class="row">
+        <?= $form->field($model, 'active')->textInput(['maxlength' => true]) ?>
+    </div>
+
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Guardar'), ['class' => 'btn btn-success']) ?>
     </div>
