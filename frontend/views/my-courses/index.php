@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'user_id',
+            //'user_id',
             [
                 'attribute' => '',
                 'label' => 'Nombre del curso',

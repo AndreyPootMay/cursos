@@ -14,11 +14,10 @@ use yii\helpers\Url;
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <?= Yii::t('app', 'E-Center')  ?>
+                <?= Yii::t('app', '')  ?>
             </div>
             <div class="pull-left info">
-                <p><?= Yii::$app->user->identity->username ?></p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+               
             </div>
         </div>
         <!-- search form -->
@@ -39,37 +38,37 @@ use yii\helpers\Url;
                 [
                     'options' => ['class' => 'sidebar-menu'],
                     'items' => [
-                        ['label' => 'Menu', 'options' => ['class' => 'header']],
-                        ['label' => 'Panel de Control', 'icon' => 'fa fa-dashboard', 
+                        ['label' => Yii::t('app', 'Menú'), 'options' => ['class' => 'header']],
+                        ['label' => Yii::t('app', 'Panel de Control'), 'icon' => 'fa fa-dashboard', 
                             'url' => ['/'], 'active' => $this->context->route == 'site/index'
                         ],
                         [
-                            'label' => 'Mis cursos',
+                            'label' => Yii::t('app', 'Mis cursos'),
                             'icon' => 'fa fa-database',
                             'url' => '#',
                             'items' => [
                                 [
-                                    'label' => 'Cursos Activos',
-                                    'icon' => 'fa fa-database',
-                                    'url' => '?r=master1/',
-				                    'active' => $this->context->route == 'master1/index'
+                                    'label' => Yii::t('app', 'Cursos Activos'),
+                                    'icon' => 'fa fa-bookmark',
+                                    'url' => ['my-courses/index', 'id' => Yii::$app->user->identity->id, 'active' => 1],
+				                    'active' => $this->context->route == ['my-courses/index', 'id' => Yii::$app->user->identity->id, 'active' => 1]
                                 ],
                                 [
-                                    'label' => 'Cursos Inactivos',
-                                    'icon' => 'fa fa-database',
-                                    'url' => '?r=master2/',
-                                    'active' => $this->context->route == 'master2/index'
+                                    'label' => Yii::t('app', 'Cursos Archivados'),
+                                    'icon' => 'fa fa-trash',
+                                    'url' => ['my-courses/index', 'id' => Yii::$app->user->identity->id, 'active' => 0],
+                                    'active' => $this->context->route == ['my-courses/index', 'id' => Yii::$app->user->identity->id, 'active' => 0]
                                 ]
                             ]
                         ],
                         [
-                            'label' => 'Acerca de',
+                            'label' => Yii::t('app', 'Acerca de'),
                             'icon' => 'fa fa-info',
-                            'url' => ['/user'],
+                            'url' => ['/site/about'],
                             'active' => $this->context->route == 'site/about',
                         ],
-                        ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii'],],
-                        ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
+                        //['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii'],],
+                        //['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
                     ],
                 ]
         );

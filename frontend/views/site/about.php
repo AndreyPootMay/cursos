@@ -13,11 +13,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
       <div class="row product-title-info">
         <div class="col-md-12">
-          <h1>About Us</h1>
+          <h1><?= Yii::t('app', 'Acerca de:') ?></h1>
         </div>
       </div>
     </div>
-    <div class="parallax" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/hero/hero.jpg);"></div>
   </section>
   <section class="story-section company-sections ct-u-paddingBoth100 paddingBothHalf noTopMobilePadding" id="section">
     <div class="container text-center">
