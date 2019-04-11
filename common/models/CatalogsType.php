@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use common\models\Catalogs;
 
 /**
  * This is the model class for table "catalogs_type".
@@ -46,5 +47,14 @@ class CatalogsType extends \yii\db\ActiveRecord
             'plural_name' => Yii::t('app', 'Nombre Plural'),
             'order_menu' => Yii::t('app', 'Orden en el menú'),
         ];
+    }
+
+    /**
+     * Selecciona todos los catálogos sin importar
+     * @return [type] [description]
+     */
+    public function getCatalogs()
+    {
+        return $this->hasOne(Catalogs::className(), ['id' => 'catalog_id']);
     }
 }

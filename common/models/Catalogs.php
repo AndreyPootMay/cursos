@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use common\models\CatalogsType;
 
 /**
  * This is the model class for table "catalogs".
@@ -55,5 +56,14 @@ class Catalogs extends \yii\db\ActiveRecord
             'updated_at' => Yii::t('app', 'Editado el'),
             'updated_by' => Yii::t('app', 'Editado por'),
         ];
+    }
+
+    /**
+     * Regresa todos los tipos de catálogos
+     * @return [type] [description]
+     */
+    public function getCatalogsType()
+    {
+        return $this->hasMany(CatalogsType::className(), ['catalog_id' => 'id']);
     }
 }
