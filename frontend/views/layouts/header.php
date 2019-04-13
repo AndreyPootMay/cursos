@@ -5,7 +5,7 @@ use yii\helpers\Html;
 ?>
 <header class="main-header">
         <!-- Logo -->
-        <a href="site/index" class="logo">
+        <a href="/site/index" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b><?= '<img src="'. Yii::getAlias('@img') . '\logo.png" width="60px" class="img-responsive" style="padding-top: 10;"/>'?></b></span>
           <!-- logo for regular state and mobile devices -->

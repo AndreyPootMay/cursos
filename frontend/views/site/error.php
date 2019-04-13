@@ -7,21 +7,19 @@
 
 use yii\helpers\Html;
 
-$this->title = $name;
+$this->title = Yii::t('app', '#404 No encontrado')
 ?>
 <div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <?= nl2br(Yii::t('app', '404, No se encuentra la acción en el servidor.')) ?>
     </div>
 
     <p>
-        The above error occurred while the Web server was processing your request.
+        <?= Yii::t('app', 'El siguiente error sucede gracias a un problema con el servidor.') ?>
     </p>
     <p>
-        Please contact us if you think this is a server error. Thank you.
+        <?= Yii::t('app', 'Contacte con el administrador para más información.')  ?>
     </p>
 
 </div>
